@@ -29,4 +29,4 @@ battery_lightning.buildType = () => extend(Wall.WallBuild, battery_lightning, {
         //Sounds.spark.at(this.x, this.y);
     }
 });
-require("mod.js")
+
