@@ -22,7 +22,7 @@ battery_lightning.buildType = () => extend(Battery.BatteryBuild, battery_lightni
             damage, 
             posX, 
             posY, 
-            parseFloat(Mathf.random(360.0)),
+            angle,
             length
         );
         }
