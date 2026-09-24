@@ -1,6 +1,6 @@
 const battery_lightning = extend(Battery, "abc", {size: 1, category: Category.units, buildVisibility: BuildVisibility.shown});
 
-battery_lightning.buildType = () => extend(Wall.WallBuild, battery_lightning, {
+battery_lightning.buildType = () => extend(Battery.BatteryBuild, battery_lightning, {
     onDestroyed: function() {
         this.super$onDestroyed();
 
@@ -22,7 +22,7 @@ battery_lightning.buildType = () => extend(Wall.WallBuild, battery_lightning, {
             damage, 
             posX, 
             posY, 
-            angle, 
+            parseFloat(Mathf.random(360.0));
             length
         );
         }
