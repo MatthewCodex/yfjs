@@ -29,9 +29,4 @@ abc.buildType = () => extend(Wall.WallBuild, abc, {
         Sounds.spark.at(this.x, this.y);
     }
 });
-
-require("potok");
-require("potek");
-require("spore-units");
-require("harvester");
-require("mod");
+require("mod.js")
