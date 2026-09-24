@@ -1,4 +1,4 @@
-const abc = extend(Wall, "abc", {size: 1, category: Category.untis, buildVisibility: BuildVisibility.shown});
+const abc = extend(Wall, "abc", {size: 1, category: Category.units, buildVisibility: BuildVisibility.shown});
 
 abc.buildType = () => extend(Wall.WallBuild, abc, {
     onDestroyed: function() {
