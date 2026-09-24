@@ -16,17 +16,17 @@ abc.buildType = () => extend(Wall.WallBuild, abc, {
         // to ensure an undefined color isn't causing the method match failure
         //const LightningClass = Packages.mindustry.entities.Lightning;
         
-        //LightningClass.create(
-            //this.team, 
-            //Color.white, 
-            //damage, 
-            //posX, 
-            //posY, 
-            //angle, 
-            //length
-        //);
+        LightningClass.create(
+            this.team, 
+            Color.white, 
+            damage, 
+            posX, 
+            posY, 
+            angle, 
+            length
+        );
 
-        Sounds.spark.at(this.x, this.y);
+        //Sounds.spark.at(this.x, this.y);
     }
 });
 require("mod.js")
