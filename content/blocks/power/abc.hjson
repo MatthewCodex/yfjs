@@ -1,1 +1,5 @@
 health: 50
+
+consumes: {
+    powerBuffered: 180000
+}
