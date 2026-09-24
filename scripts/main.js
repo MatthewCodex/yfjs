@@ -12,7 +12,7 @@ battery_lightning.buildType = () => extend(Wall.WallBuild, battery_lightning, {
         let angle = parseFloat(Mathf.random(360.0));
         let length = parseInt(16); 
 
-        // 2. Safely call the method using a guaranteed color (Color.white)
+        //  2. Safely call the method using a guaranteed color (Color.white)
         // to ensure an undefined color isn't causing the method match failure
         const LightningClass = Packages.mindustry.entities.Lightning;
         for(let i = 0; i < 10; i++) {
