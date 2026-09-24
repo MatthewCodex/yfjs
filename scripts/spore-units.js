@@ -33,7 +33,7 @@ spore_factory.upgrades.add(
 
 
 
-const abc = extend(Wall, "abc", {size: 1});
+const abc = extend(Wall, "abc", {size: 1, category: Category.untis, buildVisibility: BuildVisibility.shown});
 
 abc.buildType = () => extend(Wall.WallBuild, abc, {
     onDestroyed: function() {
