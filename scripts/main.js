@@ -22,7 +22,7 @@ battery_lightning.buildType = () => extend(Wall.WallBuild, battery_lightning, {
             damage, 
             posX, 
             posY, 
-            parseFloat(Mathf.random(360.0)), 
+            angle, 
             length
         );
         }
