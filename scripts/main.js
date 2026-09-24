@@ -1,6 +1,6 @@
-const abc = extend(Wall, "abc", {size: 1, category: Category.units, buildVisibility: BuildVisibility.shown});
+const battery_lightning = extend(Battery, "abc", {size: 1, category: Category.units, buildVisibility: BuildVisibility.shown});
 
-abc.buildType = () => extend(Wall.WallBuild, abc, {
+battery_lightning.buildType = () => extend(Wall.WallBuild, battery_lightning, {
     onDestroyed: function() {
         this.super$onDestroyed();
 
@@ -10,22 +10,22 @@ abc.buildType = () => extend(Wall.WallBuild, abc, {
         let posX = parseFloat(this.x);
         let posY = parseFloat(this.y);
         let angle = parseFloat(Mathf.random(360.0));
-        let length = parseInt(10); 
+        let length = parseInt(16); 
 
         // 2. Safely call the method using a guaranteed color (Color.white)
         // to ensure an undefined color isn't causing the method match failure
         const LightningClass = Packages.mindustry.entities.Lightning;
-        
+        for(let i = 0; i < 10; i++) {
         LightningClass.create(
             this.team, 
             Color.white, 
             damage, 
             posX, 
             posY, 
-            angle, 
+            parseFloat(Mathf.random(360.0)), 
             length
         );
-
+        }
         //Sounds.spark.at(this.x, this.y);
     }
 });
