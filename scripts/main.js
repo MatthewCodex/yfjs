@@ -4,6 +4,8 @@ battery_lightning.buildType = () => extend(Battery.BatteryBuild, battery_lightni
     onDestroyed: function() {
         this.super$onDestroyed();
 
+        const LightningClass = Packages.mindustry.entities.Lightning;
+        for(let i = 0; i < 10; i++) {
         // 1. Force your numeric values to be strict primitives for Java
         // 'length' MUST be parsed as an explicit integer or Java rejects the method match
         let damage = parseFloat(25.0);
@@ -14,8 +16,7 @@ battery_lightning.buildType = () => extend(Battery.BatteryBuild, battery_lightni
 
         //  2. Safely call the method using a guaranteed color (Color.white)
         // to ensure an undefined color isn't causing the method match failure
-        const LightningClass = Packages.mindustry.entities.Lightning;
-        for(let i = 0; i < 10; i++) {
+        
         LightningClass.create(
             this.team, 
             Color.white, 
